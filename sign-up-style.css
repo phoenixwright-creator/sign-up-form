@@ -7,6 +7,13 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
+  @font-face {
+    font-family: 'open_sansregular';
+    src: url('opensans-regular-webfont.woff2') format('woff2'),
+        url('opensans-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
 
  html {
     line-height: 1.15; /* 1 */
@@ -22,6 +29,7 @@
   
   body {
     margin: 0;
+    font-family: 'open_sansregular';
   }
   
   /**
@@ -378,7 +386,7 @@
     width: 100%;
     justify-content: center;
     align-items: center;
-    top: 20%;
+    top: 15%;
   }
 
   #title-logo {
@@ -396,6 +404,7 @@
     bottom: 10px;
     text-align: center;
     color: white;
+    font-size: 0.8rem;
   }
 
   #form-div {
@@ -403,24 +412,124 @@
     flex-direction: column;
     width: 60%;
     justify-content: center;
-    padding-left: 25px;
-    padding-right: 25px;
+    background-color: whitesmoke;
   }
 
-  form p {
-    font-size: 1.3rem;
-  }
-
-  fieldset {
+  #sign-up-div {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 30%);
+    grid-template-rows: repeat(7, auto);
     grid-template-areas: 
+      "legend legend"
       "labelfirst labellast"
       "inputfirst inputlast"
       "labelmail labelphone"
       "inputmail inputphone"
       "labelpwd labelconfirm"
       "inputpwd inputconfirm";
+    
+    padding-bottom: 20px;
+    column-gap: 10%;
+    justify-content: start;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: white;
   }
 
+  p#sign-up-description {
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: justify;
+    padding-bottom: 30px;
+  }
+
+  p#legend {
+    grid-area: legend;
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+
+  label[for='first-name'] {
+    grid-area: labelfirst;
+  }
+
+  label[for='last-name'] {
+    grid-area: labellast;
+  }
+
+  label[for='email'] {
+    grid-area: labelmail;
+  }
+
+  label[for='phone'] {
+    grid-area: labelphone;
+  }
+
+  label[for='password'] {
+    grid-area: labelpwd;
+  }
+
+  label[for='confirm-password'] {
+    grid-area: labelconfirm;
+  }
+
+  input#first-name {
+    grid-area: inputfirst;
+    margin-bottom: 10px;
+  }
+
+  input#last-name {
+    grid-area: inputlast;
+    margin-bottom: 10px;
+  }
+
+  input#email {
+    grid-area: inputmail;
+    margin-bottom: 10px;
+  }
+
+  input#phone {
+    grid-area: inputphone;
+    margin-bottom: 10px;
+  }
+
+  input#password {
+    grid-area: inputpwd;
+  }
+
+  input#confirm-password {
+    grid-area: inputconfirm;
+  }
+
+  label {
+    font-size: 0.8rem;
+    padding-bottom: 3px;
+  }
+
+  input {
+    padding: 5px;
+    border: 1px solid #E5E7EB;
+    border-radius: 3px;
+    font-size: 0.8rem;
+  }
+
+  button#create-account {
+    margin-left: 20px;
+    margin-bottom: 10px;
+    padding: 5px 10px 5px 10px;
+    background-color: cornflowerblue;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+
+  #login-div {
+    padding-left: 20px;
+    font-size: 0.8rem;
+  }
+  
   
